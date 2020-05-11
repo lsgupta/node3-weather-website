@@ -1,5 +1,3 @@
-console.log('client side script is loaded')
-
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
@@ -18,13 +16,13 @@ weatherForm.addEventListener('submit', (e) => {
     else {
 
         fetch('http://localhost:3000/weather?address=' + location).then((response) => {
-            response.json().then((data) => {
-                if (data.error) {
-                    messageOne.textContent= data.error
+            response.json().then(({error,location,forecast}) => {
+                if (error) {
+                    messageOne.textContent= error
                 }
                 else {
-                    messageOne.textContent=data.location;
-                    messageTwo.textContent=data.forecast;
+                    messageOne.textContent=location;
+                    messageTwo.textContent=forecast;
                     
 
 
