@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node /app.js"
+    "start": "node /Users/test/Desktop/JS/web-server/app.js"
   },
   "keywords": [],
   "author": "",
