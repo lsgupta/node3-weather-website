@@ -10,7 +10,7 @@ console.log(__dirname)
 const publicPath = path.join(__dirname, '/public')
 const viewsPath = path.join(__dirname, '/templates/views')
 const partialsPath = path.join(__dirname, '/templates/partials')
-
+const port=process.env.PORT||3000
 
 //express looks default for hbs in folder name 'views'
 //app.set('views',pathName)
@@ -111,6 +111,6 @@ app.get('*', (req, res) => {
         title: 'Error'
     })
 })
-app.listen(3000, () => {
-    console.log('server is running');
+app.listen(port, () => {
+    console.log('server is running on'+port);
 })
