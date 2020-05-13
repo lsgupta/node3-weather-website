@@ -9,7 +9,7 @@ const forecast=(lat,long,callback)=>{
         }
         else
         callback(undefined,
-           body.daily.data[0].summary + ' Current temp is ' + body.currently.temperature + ', probablity of rain is ' + body.currently.precipProbability+'.'
+           body.daily.data[0].summary + ' Current temp is ' + body.currently.temperature + ', probablity of rain is ' + body.currently.precipProbability+'. Minimum temprature is '+body.daily.data[0].temperatureLow+', Maximum temprature is '+body.daily.data[0].temperatureHigh+'.'
         )
     })
 }
