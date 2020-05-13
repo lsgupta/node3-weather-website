@@ -1,15 +1,15 @@
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
-const forecast = require('./utils/forecast')
-const geocode = require('./utils/geocode')
-const check=require('./utils/check')
+const forecast = require('../utils/forecast')
+const geocode = require('../utils/geocode')
+const check=require('../utils/check')
 
 const app = express()
 console.log(__dirname)
-const publicPath = path.join(__dirname, '/public')
-const viewsPath = path.join(__dirname, '/templates/views')
-const partialsPath = path.join(__dirname, '/templates/partials')
+const publicPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 const port=process.env.PORT||3000
 
 //express looks default for hbs in folder name 'views'
